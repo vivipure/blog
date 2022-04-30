@@ -39,7 +39,7 @@
 <style lang="less" scoped>
 .left-sticky {
   position: sticky;
-  width: 200px;
+  margin-right: 4em;
   top: 2em;
   .logo {
     width: 5em;

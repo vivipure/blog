@@ -1,4 +1,5 @@
 @import url(./reset.css);
+@import url(./variable.less);
 
 html {
     position: relative;
@@ -8,8 +9,29 @@ html {
 body {
     background: #fff;
     color: #3d4144;
+
     &::-webkit-scrollbar {
         display: none;
     }
-    font-size: 16px;
+
+
+    @media screen and (max-width: @small) {
+        font-size: 14px;
+    }
+
+    @media screen and (min-width: @small) and (max-width: @medium) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: @medium) and (max-width: @large) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width: @large) and (max-width: @x-large) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: @x-large) {
+        font-size: 22px;
+    }
 }

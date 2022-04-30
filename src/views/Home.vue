@@ -40,6 +40,5 @@ import Footer from "../components/Footer.vue";
   padding: 0 1em;
   margin: 0 auto;
   display: flex;
-  height: 400vh;
 }
 </style>
