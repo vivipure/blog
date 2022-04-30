@@ -1,5 +1,5 @@
 <template>
-  <div class="left-sticky">
+  <div class="card-info">
     <div class="logo"></div>
     <div class="blog-author">Funkun</div>
     <div class="description">
@@ -37,17 +37,7 @@
 <script setup lang="ts"></script>
 
 <style lang="less" scoped>
-.left-sticky {
-  position: sticky;
-  top: 2em;
-  float: left;
-  width: calc(300px - 2em);
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-
+.card-info {
   .logo {
     width: 5em;
     height: 5em;
@@ -66,17 +56,17 @@
 }
 
 .follow-list {
-    li {
-        display: flex;
-        margin-bottom: .6em;
-        align-items: center;
-        .icon {
-            margin-right: 0.4em;
-            width: 1.2em;
-            height: 1.2em;
-            background: #000;
-            border-radius: 50%;
-        }
+  li {
+    display: flex;
+    margin-bottom: 0.6em;
+    align-items: center;
+    .icon {
+      margin-right: 0.4em;
+      width: 1.2em;
+      height: 1.2em;
+      background: #000;
+      border-radius: 50%;
     }
+  }
 }
 </style>

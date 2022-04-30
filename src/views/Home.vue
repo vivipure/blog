@@ -1,33 +1,18 @@
 <template>
-  <div class="fun-blog">
-    <Header></Header>
-    <main>
+  <Layout>
+    <template #top>
       <div class="banner"></div>
-      <div class="content-box">
-        <Left></Left>
-        <Right></Right>
-      </div>
-    </main>
-    <Footer></Footer>
-  </div>
+    </template>
+    <PostList></PostList>
+  </Layout>
 </template>
 
 <script setup lang="ts">
-import Header from "../components/Header.vue";
-import Left from "../components/Left.vue";
-import Right from "../components/Right.vue";
-import Footer from "../components/Footer.vue";
+import PostList from "../components/PostList.vue";
+import Layout from "../components/Layout.vue";
 </script>
 
 <style lang="less" scoped>
-.fun-blog {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  main {
-    flex: 1;
-  }
-}
 .banner {
   height: 15em;
   background-image: url(https://thomas.preissler.me/assets/images/teaser.jpeg);
@@ -35,16 +20,5 @@ import Footer from "../components/Footer.vue";
   background-position: center;
   margin-bottom: 5em;
 }
-.content-box {
-  max-width: 1280px;
-  padding: 0 1em;
-  margin: 0 auto;
-  clear: both;
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
 
-}
 </style>
