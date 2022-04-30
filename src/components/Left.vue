@@ -39,8 +39,15 @@
 <style lang="less" scoped>
 .left-sticky {
   position: sticky;
-  margin-right: 4em;
   top: 2em;
+  float: left;
+  width: calc(300px - 2em);
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
   .logo {
     width: 5em;
     height: 5em;

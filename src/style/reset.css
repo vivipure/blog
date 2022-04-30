@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    height: 100%;
-}
 
 body {
     background: rgb(135, 244, 102);

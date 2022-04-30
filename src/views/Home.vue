@@ -39,6 +39,12 @@ import Footer from "../components/Footer.vue";
   max-width: 1280px;
   padding: 0 1em;
   margin: 0 auto;
-  display: flex;
+  clear: both;
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
 }
 </style>
