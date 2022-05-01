@@ -1,10 +1,12 @@
 <template>
   <div class="fun-header">
     <div class="menu-box">
-      <div class="site-title">Funkun's blog</div>
+      <div class="site-title">
+        <router-link to="/"> Funkun's blog</router-link>
+      </div>
       <ul class="menus">
         <li class="item">
-          <a href="#">Blog</a>
+          <router-link to="/">Blog</router-link>
         </li>
         <li class="item">
           <a href="#">About</a>

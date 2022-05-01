@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Home from "./views/PostDetail.vue";
 </script>
 
 <template>
-  <Home></Home>
+  <Router-view></Router-view>
 </template>
 
 <style></style>

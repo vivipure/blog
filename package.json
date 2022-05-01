@@ -8,9 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.14",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
+    "@types/marked": "^4.0.3",
     "@vitejs/plugin-vue": "^2.3.0",
     "autoprefixer": "^10.4.4",
     "less": "^4.1.2",

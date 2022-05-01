@@ -26,9 +26,9 @@
 import { computed, ref } from "@vue/reactivity";
 
 interface PropsInterface {
-  pageSize: number;
-  total: number;
-  currentPage: number;
+  pageSize?: number;
+  total?: number;
+  currentPage?: number;
 }
 const props = withDefaults(defineProps<PropsInterface>(), {
   pageSize: 10,
