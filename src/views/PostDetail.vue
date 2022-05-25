@@ -19,7 +19,8 @@ import { useMarkdown } from "../hooks/useMarkdown";
 const contentRef = ref<Element>();
 const route = useRoute();
 const { postId } = route.params;
-const path = `/content/${postId}.md`;
+
+const path = `content/${postId}.md`;
 useMarkdown(path, contentRef);
 
 </script>

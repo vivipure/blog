@@ -17,7 +17,7 @@ import { useMarkdown } from "../hooks/useMarkdown";
 import { ref } from 'vue'
 
 const contentRef = ref<Element>()
-const path = '/about.md'
+const path = 'about.md'
 useMarkdown(path, contentRef);
 
 </script>
