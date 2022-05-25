@@ -26,15 +26,19 @@
 import { computed, ref } from "@vue/reactivity";
 
 interface PropsInterface {
-  pageSize?: number;
+  offset?: number;
   total?: number;
   currentPage?: number;
 }
 const props = withDefaults(defineProps<PropsInterface>(), {
-  pageSize: 10,
+  offset: 10,
   total: 0,
   currentPage: 1,
 });
+
+const emit = defineEmits<{
+  (event: 'pageChange', page: number):void
+}>()
 
 const curPageIdx = ref<number>(props.currentPage);
 
@@ -43,7 +47,7 @@ const pageBtnList = computed<number[]>(() => {
   if (props.total == 0) {
     return [1];
   }
-  const pageCount = Math.ceil(props.total / props.pageSize);
+  const pageCount = Math.ceil(props.total / props.offset);
   const pageArr = Array.from({ length: pageCount }, (v, i) => i + 1);
 
   return pageArr;
@@ -61,6 +65,7 @@ const prevBtnDisabled = computed(() => {
 const pageChange = (page: number) => {
   if (page === curPageIdx.value) return;
   curPageIdx.value = page;
+  emit('pageChange', page)
 };
 
 const addPageIdx = () => {

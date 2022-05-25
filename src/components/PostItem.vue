@@ -23,9 +23,7 @@ interface PropsInterface {
 }
 
 const props = defineProps<PropsInterface>();
-
 const post = props.data
-console.log(post);
 </script>
 
 <style lang="less" scoped>

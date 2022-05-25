@@ -1,7 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory,  } from "vue-router";
 
 import Home from '../views/Home.vue'
 import PostDetail from '../views/PostDetail.vue'
+import About from '../views/About.vue'
 
 
 const routes = [
@@ -14,12 +15,20 @@ const routes = [
         component: PostDetail
     },
     {
+        path: '/page/:page',
+        component: Home
+    },
+    {
+        path: '/about',
+        component: About
+    },
+    {
         path: '/:pathMatch(.*)*',
         redirect: '/'
     },
 ]
 
 export default createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: routes,
 })

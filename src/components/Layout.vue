@@ -41,10 +41,11 @@ import CardInfo from "./CardInfo.vue";
     content: "";
     display: table;
   }
-  &> {
-      margin-top: 2em;
+  & > {
+    margin-top: 2em;
   }
 }
+
 .left-sticky {
   position: sticky;
   top: 2em;
@@ -60,5 +61,14 @@ import CardInfo from "./CardInfo.vue";
   float: right;
   width: calc(100% - 300px);
   overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .left-sticky {
+    display: none;
+  }
+  .right-content {
+    width: 100%;
+  }
 }
 </style>

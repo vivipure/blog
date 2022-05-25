@@ -1,10 +1,8 @@
 <template>
   <Layout>
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap" v-loading="!loading">
       <header>
-        <h1 id="page-title" class="page__title p-name" itemprop="headline">
-          Using TypeScript to validate translations at compile time
-        </h1>
+        <h1 class="post-title">Test Markdown Post</h1>
       </header>
       <section
         ref="contentRef"
@@ -17,41 +15,47 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, onMounted, ref } from "vue";
+import {   ref } from "vue";
 import Layout from "../components/Layout.vue";
-import { marked } from "marked";
 
-import { useRoute, useRouter } from "vue-router";
-
-const postHTML = ref<string>("");
+import { useRoute, } from "vue-router";
+import { useMarkdown } from "../hooks/useMarkdown";
 
 const contentRef = ref<Element>();
 
 const route = useRoute();
-const router = useRouter()
 
 const { postId } = route.params;
 
-fetch(`../content/${postId}.markdown`)
-  .then((res) => {
-    console.log(res)
-    if(res.status == 200)  return res.text()
-    router.push('/')
-  })
-  .then((res) => {
-    const html = marked(res as string);
-    postHTML.value = html;
-    nextTick(() => {
-      contentRef.value?.querySelectorAll("pre code").forEach((codeElement) => {
-        window.hljs.highlightElement(codeElement);
-      });
-    });
-  })
+const path = `../content/${postId}.markdown`;
 
-
+const { html: postHTML, loading } = useMarkdown(path, contentRef);
 </script>
 
 <style lang="less" scoped>
+.post-title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+section {
+  ::deep {
+    p {
+      line-height: 1.5;
+      margin-bottom: 1.3em;
+    }
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 1.3em;
+    }
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}
+
 p > code,
 a > code,
 li > code,
@@ -63,13 +67,7 @@ td > code {
   background: #fafafa;
   border-radius: 4px;
 }
-// :deep() .hljs-title  {
-//   color: #2196f3;
-// }
-p {
-  line-height: 1.5;
-  margin-bottom: 1.3em;
-}
+
 pre code.hljs {
   padding: 1em;
   border-radius: 0.2em;

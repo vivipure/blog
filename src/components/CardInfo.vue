@@ -1,10 +1,10 @@
 <template>
   <div class="card-info">
-    <div class="logo"></div>
+    <TextAvatar text="FK"></TextAvatar>
     <div class="blog-author">Funkun</div>
     <div class="description">
       <p>Frontend Developer</p>
-      <p>addicted to CODE</p>
+      <p>addicted to code</p>
     </div>
 
     <ul class="follow-list">
@@ -34,17 +34,12 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TextAvatar from './TextAvatar.vue';
+</script>
 
 <style lang="less" scoped>
 .card-info {
-  .logo {
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    background: #000;
-    margin-bottom: 1em;
-  }
   .blog-author {
     font-size: 20px;
     font-weight: bold;
@@ -52,6 +47,7 @@
   }
   .description {
     margin-bottom: 1em;
+    font-size: .8em;
   }
 }
 

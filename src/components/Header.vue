@@ -9,7 +9,7 @@
           <router-link to="/">Blog</router-link>
         </li>
         <li class="item">
-          <a href="#">About</a>
+          <router-link to="/about">About</router-link>
         </li>
       </ul>
     </div>
@@ -19,6 +19,9 @@
 <script setup lang="ts"></script>
 
 <style lang="less" scoped>
+.router-link-active {
+  font-weight: bold;
+}
 .fun-header {
   max-width: 1280px;
   margin: 0 auto;
