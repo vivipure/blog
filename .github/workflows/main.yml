@@ -29,7 +29,7 @@ jobs:
       - name: Create Content
         run: |
           mkdir -p content/posts
-          file="content/posts/${{ github.event.issue.number }}.md"
+          file="public/content/${{ github.event.issue.number }}.md"
           
           touch $file
           echo "---" > $file
@@ -50,7 +50,7 @@ jobs:
           commit_options: '--allow-empty'
           repository: .
           status_options: '--untracked-files=no'
-          file_pattern: 'content/**/*'
+          file_pattern: 'public/**/*'
           push_options: '--force'
           skip_dirty_check: true
           skip_fetch: true
