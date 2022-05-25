@@ -4,7 +4,7 @@
       <header>
         <h1 class="post-title">Test Markdown Post</h1>
       </header>
-      <section ref="contentRef" class="page__content e-content" itemprop="text" v-html="postHTML"></section>
+      <section ref="contentRef" class="page__content e-content" itemprop="text" ></section>
     </div>
   </Layout>
 </template>
