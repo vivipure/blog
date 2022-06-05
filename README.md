@@ -8,6 +8,7 @@
 1. [Webpack5 的变化](https://github.com/vivipure/blog/issues/2)
 2. [Webpack 优化](https://github.com/vivipure/blog/issues/3)
 3. [组件开发和设计](https://github.com/vivipure/blog/issues/4)
+4. [Vue2 组件开发](https://github.com/vivipure/blog/issues/5)
 
 ## 个人思考
 
