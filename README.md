@@ -10,6 +10,10 @@
 3. [组件开发和设计](https://github.com/vivipure/blog/issues/4)
 4. [Vue2 组件开发](https://github.com/vivipure/blog/issues/5)
 
+## 源码学习
+1. [源码学习系列](https://github.com/vivipure/blog/issues/7)
+1. [Vuex 源码学习](https://github.com/vivipure/blog/issues/7)
+
 ## 个人思考
 
 1. [第一篇文章](https://github.com/vivipure/blog/issues/1)
