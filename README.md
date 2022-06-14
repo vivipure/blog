@@ -2,6 +2,8 @@
 
 这是我的私人博客，使用的技术栈为Vue3+TS+Vite,使用github issue 作为CMS.
 
+平时对新东西的总结，放到[这里](https://github.com/vivipure/TIL)
+
 # 博客分类
 
 ## 前端相关
@@ -17,6 +19,8 @@
 
 ## 业务沉淀
 1. SDK设计·[todo]
+2. [订单业务重构，谈谈大组件的拆分](https://github.com/vivipure/blog/issues/9)
+
 
 ## 个人思考
 1. [第一篇文章](https://github.com/vivipure/blog/issues/1)
