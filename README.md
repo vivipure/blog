@@ -20,6 +20,8 @@
 ## 业务沉淀
 1. [提供业务能力，SDK的开发](https://github.com/vivipure/blog/issues/10)
 2. [订单业务重构，谈谈大组件的拆分](https://github.com/vivipure/blog/issues/9)
+2. [编辑器重构，数据建模实践](https://github.com/vivipure/blog/issues/11)
+2. [编辑器历史记录功能，命令模式实操](https://github.com/vivipure/blog/issues/12)
 
 
 ## 个人思考
