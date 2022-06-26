@@ -16,12 +16,15 @@
 1. [源码学习系列](https://github.com/vivipure/blog/issues/7)
 2. [Vuex 源码学习](https://github.com/vivipure/blog/issues/6)
 3. [Vue Router 源码学习](https://github.com/vivipure/blog/issues/8)
+3. [Vue 源码学习 (1) - 起始篇](https://github.com/vivipure/blog/issues/14)
+3. [Vue 源码学习 (2) - Vue 初始化](https://github.com/vivipure/blog/issues/15)
 
 ## 业务沉淀
 1. [提供业务能力，SDK的开发](https://github.com/vivipure/blog/issues/10)
 2. [订单业务重构，谈谈大组件的拆分](https://github.com/vivipure/blog/issues/9)
 2. [编辑器重构，数据建模实践](https://github.com/vivipure/blog/issues/11)
 2. [编辑器历史记录功能，命令模式实操](https://github.com/vivipure/blog/issues/12)
+3. [网页打包安卓应用，实现流程自动化](https://github.com/vivipure/blog/issues/13)
 
 
 ## 个人思考
