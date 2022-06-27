@@ -4,6 +4,8 @@
 
 平时对新东西的总结，放到[这里](https://github.com/vivipure/TIL)
 
+也可以使用 hashnode 进行阅读，博客地址：[Funkun's Blog](https://funkun.hashnode.dev/)
+
 # 博客分类
 
 ## 前端相关
