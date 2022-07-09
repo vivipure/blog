@@ -13,6 +13,9 @@
 2. [Webpack 优化](https://github.com/vivipure/blog/issues/3)
 3. [组件开发和设计](https://github.com/vivipure/blog/issues/4)
 4. [Vue2 组件开发](https://github.com/vivipure/blog/issues/5)
+5. [简单又强大的状态管理 - Zustand](https://github.com/vivipure/blog/issues/20)
+5. [我所理解的 React Hooks](https://github.com/vivipure/blog/issues/21)
+
 
 ## 源码学习
 1. [源码学习系列](https://github.com/vivipure/blog/issues/7)
