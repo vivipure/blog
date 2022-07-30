@@ -34,3 +34,4 @@
 
 ## 个人思考
 1. [第一篇文章](https://github.com/vivipure/blog/issues/1)
+2. [工作三年，我对前端领域的困惑](https://github.com/vivipure/blog/issues/22)
