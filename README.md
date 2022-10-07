@@ -15,6 +15,7 @@
 4. [Vue2 组件开发](https://github.com/vivipure/blog/issues/5)
 5. [简单又强大的状态管理 - Zustand](https://github.com/vivipure/blog/issues/20)
 6. [我所理解的 React Hooks](https://github.com/vivipure/blog/issues/21)
+6. [Solid 使用体验](https://github.com/vivipure/blog/issues/24)
 
 
 ## 源码学习
