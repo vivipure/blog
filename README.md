@@ -1,4 +1,4 @@
-# Funkun's Blog
+# Fangkun's Blog
 
 这是我的私人博客，使用的技术栈为Vue3+TS+Vite,使用github issue 作为CMS.
 
