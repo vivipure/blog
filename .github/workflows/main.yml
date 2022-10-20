@@ -35,9 +35,9 @@ jobs:
           echo "---" > $file
           
           echo "title: \"${{ github.event.issue.title }}\"" >> $file
+          echo "id: \"${{ github.event.issue.number }}\"" >> $file
           echo "created: \"${{ github.event.issue.created_at }}\"" >> $file
           echo "updated: \"${{ github.event.issue.updated_at }}\"" >> $file
-          echo "draft: false" >> $file
           echo "---" >> $file
           echo "" >> $file
           echo "${{ github.event.issue.body }}" >> $file
