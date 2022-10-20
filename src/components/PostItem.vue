@@ -4,8 +4,8 @@
       {{post.title}}
     </div>
     <div class="post-time">
-      <div class="icon"></div>
-      <div class="time">April 27, 2022</div>
+      <img class="icon" :src="post.avatar" />
+      <div class="time">{{post.updated}}</div>
     </div>
     <div class="post-excerpt">
       {{post.slug}}
@@ -16,9 +16,11 @@
 <script setup lang="ts">
 interface PropsInterface {
   data: {
-    id: number;
+    id: string;
     title: string;
     slug: string;
+    updated: string
+    avatar: string
   };
 }
 
@@ -28,14 +30,13 @@ const post = props.data
 
 <style lang="less" scoped>
 .post-item {
+  display: block;
   cursor: pointer;
-  margin-bottom: 3em;
   .post-title {
-    color: #2f7d95;
     line-height: 1.5;
+    font-style: it;
     font-size: 1.25em;
-    font-weight: bold;
-    text-decoration: underline;
+    // font-weight: bold;
     margin-bottom: 0.5em;
     transition: 0.3s;
     &:hover {
@@ -51,7 +52,6 @@ const post = props.data
       margin-right: 0.5em;
       width: 1em;
       height: 1em;
-      background: #000;
     }
     .time {
       font-size: 0.8em;
@@ -60,7 +60,7 @@ const post = props.data
   }
   .post-excerpt {
     font-size: 0.8em;
-    color: #a1a1a1;
+    color: #bebebe;
   }
 }
 </style>

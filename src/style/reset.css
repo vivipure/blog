@@ -5,7 +5,6 @@
 }
 
 body {
-    background: rgb(135, 244, 102);
     color: #fff;
 }
 
@@ -15,5 +14,5 @@ ul,li {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #007fff;
 }

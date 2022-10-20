@@ -5,7 +5,7 @@
       <slot name="top"></slot>
       <div class="content-box">
         <div class="left-sticky">
-          <CardInfo></CardInfo>
+          <SideBar></SideBar>
         </div>
         <div class="right-content">
           <slot></slot>
@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
-import CardInfo from "./CardInfo.vue";
+import SideBar from "./SideBar.vue";
 </script>
 
 <style lang="less" scoped>

@@ -13,6 +13,7 @@ import { computed } from "@vue/reactivity";
 
 const props = defineProps<{
   text: string;
+  bgcolor: string
 }>();
 
 const avatarBgColor = computed(() => {
@@ -23,7 +24,8 @@ const avatarBgColor = computed(() => {
   const green = Math.pow(charGreen, 7) % 200;
   const blue = Math.pow(charGreen + charRed, 7) % 200;
 
-  return `rgb(${red},${green},${blue})`;
+  return props.bgcolor ||  `rgb(${red},${green},${blue})`;
+  
 });
 </script>
 

@@ -4,7 +4,7 @@
       <header>
         <h1 class="post-title">Test Markdown Post</h1>
       </header>
-      <section ref="contentRef" class="page__content e-content" itemprop="text" ></section>
+      <section ref="contentRef" class="post-content" itemprop="text" ></section>
     </div>
   </Layout>
 </template>
@@ -14,14 +14,14 @@ import { ref } from "vue";
 import Layout from "../components/Layout.vue";
 
 import { useRoute, } from "vue-router";
-import { useMarkdown } from "../hooks/useMarkdown";
+import { useFetch } from "../hooks/useFetch";
 
 const contentRef = ref<Element>();
 const route = useRoute();
-const { postId } = route.params;
+const { postId  } = route.params;
 
-const path = `content/${postId}.md`;
-useMarkdown(path, contentRef);
+const path = `data/content.json`;
+useFetch(path, postId as string,contentRef);
 
 </script>
 
@@ -31,17 +31,20 @@ useMarkdown(path, contentRef);
   margin-bottom: 0.5em;
   font-weight: bold;
 }
+.post-content {
+  padding-bottom: 2em;
+}
 
-section {
+.post-content {
   ::deep {
     p {
       line-height: 1.5;
       margin-bottom: 1.3em;
     }
 
-    h2 {
+    h1,h2,h3 {
       font-size: 1.4em;
-      margin-bottom: 1.3em;
+      margin: 2em 0;
     }
 
     li {

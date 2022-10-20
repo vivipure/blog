@@ -1,6 +1,6 @@
 <template>
   <div class="card-info">
-    <TextAvatar text="FK"></TextAvatar>
+    <TextAvatar text="FK" bgcolor="black"></TextAvatar>
     <div class="blog-author">Funkun</div>
     <div class="description">
       <p>Frontend Developer</p>
@@ -20,15 +20,11 @@
       </li>
       <li>
         <div class="icon"></div>
-        <div class="text">Twitter</div>
+        <a href="https://github.com/vivpure">Github</a>
       </li>
       <li>
         <div class="icon"></div>
-        <div class="text">Github</div>
-      </li>
-      <li>
-        <div class="icon"></div>
-        <div class="text">Bilibili</div>
+        <a href="https://space.bilibili.com/49321387">Bilibili</a>
       </li>
     </ul>
   </div>

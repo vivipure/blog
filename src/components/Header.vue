@@ -20,7 +20,7 @@
 
 <style lang="less" scoped>
 .router-link-active {
-  font-weight: bold;
+ font-weight: bold;
 }
 .fun-header {
   max-width: 1280px;
