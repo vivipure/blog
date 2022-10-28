@@ -1,8 +1,8 @@
 name: GitHub Actions Build and Deploy Demo
 on:
   push:
-     tags:        
-      - 1.*
+    paths:
+      - 'package.json'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
