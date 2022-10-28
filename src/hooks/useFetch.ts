@@ -1,8 +1,20 @@
-import {  Ref, ref } from "vue";
+import { nextTick, reactive, Ref, ref } from "vue";
 import { useRouter } from "vue-router";
 
-export const useFetch = (url: string, id: string, refDOM: Ref<Element | undefined>) => {
-  const html = ref<string>("");
+export const useFetch = (
+  url: string,
+  id: string,
+  refDOM: Ref<Element | undefined>
+) => {
+  const post = reactive<{
+    id: string;
+    title: string;
+    content: string;
+  }>({
+    id: "",
+    title: "",
+    content: "",
+  });
   const router = useRouter();
 
   fetch(url)
@@ -11,11 +23,19 @@ export const useFetch = (url: string, id: string, refDOM: Ref<Element | undefine
       router.push("/");
     })
     .then((res) => {
-      const contentMap: Record<string, any> = JSON.parse(res as string)
-      refDOM.value!.innerHTML = contentMap[id]
+      const contentMap: Record<string, any> = JSON.parse(res as string);
+      Object.assign(post, contentMap[id])
+      refDOM.value!.innerHTML = post.content
+      nextTick(() => {
+        (refDOM.value as Element)?.querySelectorAll("pre code").forEach((codeElement) => {
+          window.hljs.highlightElement(codeElement);
+        });
+      });
+
+
     });
 
   return {
-    html,
+    post,
   };
 };

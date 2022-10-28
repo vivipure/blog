@@ -2,7 +2,7 @@
   <Layout>
     <div class="page__inner-wrap">
       <header>
-        <h1 class="post-title">Test Markdown Post</h1>
+        <h1 class="post-title">{{ post.title }}</h1>
       </header>
       <section ref="contentRef" class="post-content" itemprop="text"></section>
     </div>
@@ -21,7 +21,7 @@ const route = useRoute();
 const { postId } = route.params;
 
 const path = `data/content.json`;
-useFetch(path, postId as string, contentRef);
+const { post } = useFetch(path, postId as string, contentRef);
 </script>
 
 <style lang="less" scoped>
@@ -61,7 +61,7 @@ useFetch(path, postId as string, contentRef);
     margin-bottom: 1em;
     list-style: decimal;
   }
-  :deep(ol,ul) {
+  :deep(ol, ul) {
     padding-left: 2em;
     list-style: decimal;
   }

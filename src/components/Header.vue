@@ -9,6 +9,9 @@
           <router-link to="/">Blog</router-link>
         </li>
         <li class="item">
+          <router-link to="/">TIL</router-link>
+        </li>
+        <li class="item">
           <router-link to="/about">About</router-link>
         </li>
       </ul>
