@@ -1,10 +1,19 @@
 <template>
   <Layout>
     <div class="page__inner-wrap">
-      <header>
-        <h1 class="post-title">{{ post.title }}</h1>
-      </header>
-      <section ref="contentRef" class="post-content" itemprop="text"></section>
+      <template v-if="post.content">
+        <header>
+          <h1 class="post-title">{{ post.title }}</h1>
+        </header>
+        <section
+          ref="contentRef"
+          v-html="post.content"
+          class="post-content"
+          itemprop="text"
+        ></section>
+      </template>
+      <Loading v-else></Loading>
+
     </div>
   </Layout>
 </template>
@@ -12,6 +21,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Layout from "../components/Layout.vue";
+import Loading from "../components/Loading.vue";
 
 import { useRoute } from "vue-router";
 import { useFetch } from "../hooks/useFetch";

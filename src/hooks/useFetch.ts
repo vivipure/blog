@@ -24,15 +24,14 @@ export const useFetch = (
     })
     .then((res) => {
       const contentMap: Record<string, any> = JSON.parse(res as string);
-      Object.assign(post, contentMap[id])
-      refDOM.value!.innerHTML = post.content
+      Object.assign(post, contentMap[id]);
       nextTick(() => {
-        (refDOM.value as Element)?.querySelectorAll("pre code").forEach((codeElement) => {
-          window.hljs.highlightElement(codeElement);
-        });
+        (refDOM.value as Element)
+          ?.querySelectorAll("pre code")
+          .forEach((codeElement) => {
+            window.hljs.highlightElement(codeElement);
+          });
       });
-
-
     });
 
   return {
