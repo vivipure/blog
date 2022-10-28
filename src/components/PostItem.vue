@@ -8,7 +8,7 @@
       <div class="time">{{post.updated}}</div>
     </div>
     <div class="post-excerpt">
-      {{post.slug}}
+      {{post.excerpt}}
     </div>
   </router-link>
 </template>
@@ -18,7 +18,7 @@ interface PropsInterface {
   data: {
     id: string;
     title: string;
-    slug: string;
+    excerpt: string;
     updated: string
     avatar: string
   };

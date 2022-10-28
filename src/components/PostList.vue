@@ -15,7 +15,7 @@ interface Post {
   title: string;
   created: string;
   updated: string;
-  slug: string;
+  excerpt: string;
   avatar: string;
   id: string
 }
