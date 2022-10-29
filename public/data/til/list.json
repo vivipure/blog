@@ -1,0 +1,242 @@
+[
+    {
+        "title": "一个新的提案对React 的影响",
+        "excerpt": "注意到React 一条新的PR， 是关于 rfc。 RFC: First class support for promises and async/await 链接地址： https://github.com/reactjs/rfcs/pu...",
+        "updated": "2022-10-17 11:53:21 ",
+        "created": "2022-10-17 11:14:25 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 49
+    },
+    {
+        "title": "Edge Function",
+        "excerpt": "Edge Function 在油管上看到了 Vercel 关于 Nextjs 的Edge Function 的视频，这里做下总结。 视频地址： https://www.youtube.com/watch?v=WlP2TB2ORL4&ab_c...",
+        "updated": "2022-10-08 23:28:31 ",
+        "created": "2022-10-08 23:28:31 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 47
+    },
+    {
+        "title": "经典算法",
+        "excerpt": "fibonacci F(0) = 0, F(1) = 1 when n > 1 F(n) = F(n-1) + F(n-2) `ts function fibonacci(n) { if(n < 2) return n return fib...",
+        "updated": "2022-10-08 22:40:27 ",
+        "created": "2022-10-08 22:40:27 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 46
+    },
+    {
+        "title": "Astro 使用体验",
+        "excerpt": "介绍 Astro 是 snowpack 的作者开发的前端框架，支持多种组件化框架。提供SSG,SSR等能力。 开始 ` npm create astro@latest ` 添加模块 solid 可以通过命令直接添加模块,例如引入 solid...",
+        "updated": "2022-10-01 11:48:00 ",
+        "created": "2022-10-01 11:44:29 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 43
+    },
+    {
+        "title": "关于跨域",
+        "excerpt": "跨域 由于浏览器同源策略问题，当页面和请求的协议，主机或者端口不同时，则会判定为不同的域。即跨域请求 原因 同源策略 判定 协议，主机，port 解决办法 CORS 后端返回响应头加上 Access-Control-Allow-* 跨域时不...",
+        "updated": "2022-09-26 15:51:20 ",
+        "created": "2022-09-26 15:51:20 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 38
+    },
+    {
+        "title": "less 深入",
+        "excerpt": "less https://lesscss.org/ 作为常用的 CSS 预处理器之一，less 的使用频率是比较高的。相较于 Sass , less 的功能会相对简单。 作为开发者，使用嵌套写法只是基础的功能，还有写很多实用功能等着我们去探...",
+        "updated": "2022-09-13 08:00:44 ",
+        "created": "2022-09-13 08:00:28 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 36
+    },
+    {
+        "title": "Vue3 使用心得",
+        "excerpt": "Teleport 在 Vue2 中，开发弹窗组件时，如果需要将DOM挂载到body下时，需要我们手动进行处理。 `vue mounted() { document.body.appendChild(this.$el) } ` 在Vue3 中...",
+        "updated": "2022-10-19 09:28:55 ",
+        "created": "2022-09-13 06:38:33 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 35
+    },
+    {
+        "title": "实现图片懒加载的几种方式",
+        "excerpt": "getBoundingClientRect 使用 getBoundingClientRect 方法可以获取元素的尺寸和位置。在页面滚动时，可以计算所有的图片元素，获取元素的距离视图的高度，和视图的高度。如果视图高度大于距离高度，则将懒加载的...",
+        "updated": "2022-09-08 15:31:21 ",
+        "created": "2022-09-08 15:31:21 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 34
+    },
+    {
+        "title": "React 生态汇总",
+        "excerpt": "1.react-zoom-pan-pinch: 缩放，拖拽容器 2.reaflow: 流程图库",
+        "updated": "2022-09-06 03:53:47 ",
+        "created": "2022-09-06 03:53:47 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 33
+    },
+    {
+        "title": "Transition 组件使用",
+        "excerpt": "介绍 Transition 组件是 Vue 的内置组件,用于组件内部的发生变化时提供切换的动效。 场景： v-if/v-show 动态组件 组件根节点 Transition 组件在动画变化时，提供 className 的变化，也提供JS h...",
+        "updated": "2022-09-05 09:53:08 ",
+        "created": "2022-09-05 09:50:59 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 32
+    },
+    {
+        "title": "浏览器存储",
+        "excerpt": "localStorage 持续存储，最大存储5M. sessionStorage 页面浏览器用的临时存储，关闭页面就消失 cookie",
+        "updated": "2022-09-02 01:24:57 ",
+        "created": "2022-09-01 05:53:29 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 31
+    },
+    {
+        "title": "Event Loop 一次搞定",
+        "excerpt": "Event Loop JavaScript 处理事件执行顺序的机制 JavaScript 是单线程语言，执行代码时即有同步代码也有异步代码。同步代码的执行顺序就是按顺序执行，而对于异步代码，就需要我们对Event Loop 有足够的了解。 ...",
+        "updated": "2022-09-05 09:59:27 ",
+        "created": "2022-08-31 15:52:54 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 30
+    },
+    {
+        "title": "Swiper 开发汇总",
+        "excerpt": "当DOM处于 display : none 时，初始化的swiper由于无法获取高度，会导致swiper无法正常滑动。当DOM处于可显示状态时，使用swiper.update() 可以恢复正常。 隐藏DOM可以用 visibility",
+        "updated": "2022-08-25 03:23:37 ",
+        "created": "2022-08-25 03:23:37 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 29
+    },
+    {
+        "title": "关于HTTP",
+        "excerpt": "HTTP 版本 HTTP 1.0 无状态，无连接的应用层协议，每次请求都需要和服务器建立一个TCP连接 HTTP 1.1 1.0 的升级版，支持长连接，通过 Connection 字段设置 Keep-Alive 保持HTTP连接，避免每次连...",
+        "updated": "2022-09-18 09:16:10 ",
+        "created": "2022-08-21 14:45:32 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 28
+    },
+    {
+        "title": "Chrome Devtools 指南",
+        "excerpt": "Debug 在平时开发时，使用 Chrome Devtools 可以快速调试我们的程序，定位问题。 一. 断点 1. 1 代码断点 代码断点标识了代码暂停的位置，代码运行时，遇到断点就会停止执行。 如何进入： 在 console 中打印对应...",
+        "updated": "2022-08-15 16:04:50 ",
+        "created": "2022-08-15 15:33:39 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 27
+    },
+    {
+        "title": "常用的一些前端配置",
+        "excerpt": "别名配置 JS配置 新建 jsconfig.json, 方便编辑器代码跳转，对构建无意义 `json { \"compilerOptions\": { \"baseUrl\": \".\", \"paths\": { \"@/\": [\"src/\"] } },...",
+        "updated": "2022-08-12 08:04:32 ",
+        "created": "2022-08-12 08:04:32 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 26
+    },
+    {
+        "title": "PostCSS 学习",
+        "excerpt": "介绍 postcss是 css 的 babel, 用来处理css的转换 ` npm i postcss ` 配置文件 postcss.config.js `js module.exports = { plugins: [ require('...",
+        "updated": "2022-08-09 14:31:17 ",
+        "created": "2022-08-09 14:31:17 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 25
+    },
+    {
+        "title": "JavaScript 模块化",
+        "excerpt": "CommonJS 定义 CommonJS 规范定义了 exports 导出模块，require引入模块。Node.js 实现了 CommonJS 规范 `js module.exports = { name: \"aa\", age: 12, ...",
+        "updated": "2022-08-31 15:54:00 ",
+        "created": "2022-08-08 15:57:50 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 24
+    },
+    {
+        "title": "脚手架开发",
+        "excerpt": "TODO",
+        "updated": "2022-08-03 14:17:37 ",
+        "created": "2022-08-03 14:17:37 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 23
+    },
+    {
+        "title": "Swift 概览",
+        "excerpt": "语法",
+        "updated": "2022-07-26 15:38:09 ",
+        "created": "2022-07-26 15:38:09 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 22
+    },
+    {
+        "title": "Web 安全扫盲",
+        "excerpt": "XSS https://owasp.org/www-community/attacks/xss/ XSS (cross site scripting) 跨站脚本攻击，可以理解为网站会执行用户提交的内容。 类型： 反射型 恶意输入包含到链接中...",
+        "updated": "2022-08-08 12:25:20 ",
+        "created": "2022-07-14 15:36:00 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 21
+    },
+    {
+        "title": "RN 开发问题汇总",
+        "excerpt": "常见报错 1. java.io.IOException: Cannot run program “node”: error=2, No such file or directory https://www.jianshu.com/p/2d1...",
+        "updated": "2022-09-23 02:23:42 ",
+        "created": "2022-07-13 03:52:50 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 20
+    },
+    {
+        "title": "TypeScript  tricks",
+        "excerpt": "Utility Types Omit Omit 可以忽略对象类型中的某些属性 `ts type User = { name: string age: number id: string } type SimpleUser = Omit ` ...",
+        "updated": "2022-10-28 01:55:18 ",
+        "created": "2022-07-12 15:57:04 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 19
+    },
+    {
+        "title": "Web 性能优化",
+        "excerpt": "首页白屏优化 原因 页面在进行渲染时，同步加载的JS和CSS都会阻塞页面渲染。SPA 应用将所有逻辑打包成JS，导致浏览器加载js 时间过长，就会出现白屏情况 解决办法 首页加载不执行的js，可以使用异步加载，例如Vue 路由懒加载，异步组...",
+        "updated": "2022-07-14 15:34:15 ",
+        "created": "2022-07-11 15:18:36 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 18
+    },
+    {
+        "title": "React hooks",
+        "excerpt": "useId useId 是 React 18 新增的hooks, 可以生成独一无二的id。 当我们的组件html 里面包含 id 时，多个组件同时渲染，会表现为多个元素拥有同一个id，导致语法上不合理。虽然我们可以用随机数或者时间戳的方式生...",
+        "updated": "2022-07-10 11:28:58 ",
+        "created": "2022-07-03 10:53:00 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 17
+    },
+    {
+        "title": "Macbook 设置",
+        "excerpt": "问题： AppStore 无法正常登陆 解决： 设置网络 DNS, 114.114.114.114 , 8.8.8.8",
+        "updated": "2022-08-08 12:17:46 ",
+        "created": "2022-07-02 08:07:33 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 16
+    },
+    {
+        "title": "ES2022 的新语法",
+        "excerpt": "at 新的索引方法🤔 新增了了索引函数 at `ts const arr = [1,2,3] arr.at(0) // 1 arr.at(-1) // 3 ` 对数组，字符串，类型数组都起作用 Object.hasOwn 🙍‍♂️ 新增...",
+        "updated": "2022-08-31 15:54:16 ",
+        "created": "2022-07-01 01:27:44 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 15
+    },
+    {
+        "title": "JavaScript Generators",
+        "excerpt": "迭代器 JS 中迭代器是指包含 next 方法的对象， next 方法返回一个包含 value 和 done 键值的对象。 `js a.next() // {value: 1, done: false} a.next() // {value...",
+        "updated": "2022-06-24 16:43:05 ",
+        "created": "2022-06-24 16:25:44 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 14
+    },
+    {
+        "title": "Vue 知识点",
+        "excerpt": "data 声明的变量 不能以 _ 或者 $ 开头，Vue 不会将这些变量转化为响应式变量，且无法在实例上访问到该变量 `ts // core/instance/state.ts ... else if (!isReserved(key)) ...",
+        "updated": "2022-08-26 06:21:13 ",
+        "created": "2022-06-22 06:22:23 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 13
+    },
+    {
+        "title": "浏览器输入URL后发生了什么? 关于浏览器渲染的答案",
+        "excerpt": "MDN的答案： 渲染页面：浏览器的工作原理 掘金的文章： https://juejin.cn/post/6871947938701475847",
+        "updated": "2022-06-19 15:48:15 ",
+        "created": "2022-06-19 15:42:16 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 12
+    }
+]

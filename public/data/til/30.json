@@ -1,0 +1,9 @@
+{
+    "title": "Event Loop 一次搞定",
+    "excerpt": "Event Loop JavaScript 处理事件执行顺序的机制 JavaScript 是单线程语言，执行代码时即有同步代码也有异步代码。同步代码的执行顺序就是按顺序执行，而对于异步代码，就需要我们对Event Loop 有足够的了解。 ...",
+    "updated": "2022-09-05 09:59:27 ",
+    "created": "2022-08-31 15:52:54 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 30,
+    "content": "<h1 id=\"event-loop\">Event Loop</h1>\n<blockquote>\n<p>JavaScript 处理事件执行顺序的机制</p>\n</blockquote>\n<p>JavaScript 是单线程语言，执行代码时即有同步代码也有异步代码。同步代码的执行顺序就是按顺序执行，而对于异步代码，就需要我们对Event Loop 有足够的了解。</p>\n<p>Event Loop 负责执行代码、收集和处理事件以及执行队列中的子任务</p>\n<p>通常我们在执行代码时，会有执行堆栈。同步代码都在堆栈中执行。当堆栈中的代码执行完成后，就会从队列中取出任务进行执行。</p>\n<p>任务队列主要是 定时器，Promise 等操作的回调函数</p>\n<h1 id=\"宏任务队列\">宏任务队列</h1>\n<p>定时器定义的回调，在时间达到后，会有 定时器线程将回调推入到 宏任务队列。 </p>\n<p>举例：setTimeout, setInterval, requestAnimationFrame,</p>\n<p>举例</p>\n<h1 id=\"微任务队列\">微任务队列</h1>\n<p>定义的Promise 回调在执行时，就会推入到 微任务队列。</p>\n<p>举例：MutationObserver， Promise,</p>\n<h1 id=\"队列优先级\">队列优先级</h1>\n<p>同步代码执行完成后，会将微任务队列中的任务执行完成，再执行宏任务队列中的任务，每执行一个后又会检查微任务队列，将微任务队列执行清空，重复此过程知道所有代码执行完成。</p>\n"
+}

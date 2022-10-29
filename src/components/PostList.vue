@@ -1,15 +1,21 @@
 <template>
   <div class="right-content">
-    <PostItem v-for="(item, idx) in postList" :data="item" :key="idx" />
+    <PostItem
+      v-for="item in postList"
+      :path="props.name"
+      :data="item"
+      :key="props.name + item.id"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import { ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import PostItem from "./PostItem.vue";
 
-const route = useRoute();
+const props = defineProps<{
+  name: string;
+}>();
 
 interface Post {
   title: string;
@@ -17,16 +23,31 @@ interface Post {
   updated: string;
   excerpt: string;
   avatar: string;
-  id: string
+  id: string;
 }
 
 const postList = ref<Post[]>([]);
 
-fetch("./data/list.json")
-  .then((res) => res.json())
-  .then((r) => {
-    postList.value = r;
-  });
+onMounted(() => {
+  getPostList();
+});
+
+watch(
+  () => props.name,
+  () => {
+    getPostList();
+  }
+);
+
+function getPostList() {
+  postList.value = [];
+
+  fetch(`./data/${props.name}/list.json`)
+    .then((res) => res.json())
+    .then((r) => {
+      postList.value = r;
+    });
+}
 </script>
 
 <style lang="less" scoped>

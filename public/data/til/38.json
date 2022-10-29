@@ -1,0 +1,9 @@
+{
+    "title": "关于跨域",
+    "excerpt": "跨域 由于浏览器同源策略问题，当页面和请求的协议，主机或者端口不同时，则会判定为不同的域。即跨域请求 原因 同源策略 判定 协议，主机，port 解决办法 CORS 后端返回响应头加上 Access-Control-Allow-* 跨域时不...",
+    "updated": "2022-09-26 15:51:20 ",
+    "created": "2022-09-26 15:51:20 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 38,
+    "content": "<h1 id=\"跨域\">跨域</h1>\n<p>由于浏览器同源策略问题，当页面和请求的协议，主机或者端口不同时，则会判定为不同的域。即跨域请求</p>\n<h2 id=\"原因\">原因</h2>\n<p>同源策略</p>\n<h2 id=\"判定\">判定</h2>\n<p>协议，主机，port</p>\n<h2 id=\"解决办法\">解决办法</h2>\n<h3 id=\"cors\">CORS</h3>\n<p>后端返回响应头加上 <code>Access-Control-Allow-*</code></p>\n<p>跨域时不同的请求的处理方式是不同的，简单分为两类，简单和需预检请求</p>\n<p>简单请求：GET,POST,HEAD 。 此类请求不会发送预检请求</p>\n<p>其他请求会发送 OPTIONS 请求，来判定 <code>Access-Control-Allow-*</code>是否被允许</p>\n<ol>\n<li>Access-Control-Allow-Origin 表示允许的来源</li>\n<li>Access-Control-Allow-Methods 表示允许的请求方法</li>\n<li>Access-Control-Allow-Headers 表示允许的请求头</li>\n<li>Access-Control-Allow-Credentials 表示允许携带认证信息</li>\n</ol>\n<h3 id=\"反向代理\">反向代理</h3>\n<p>可以后端创建一个同源的服务，用来做代理，利用服务端不受限制的特性来做接口转发处理</p>\n<h3 id=\"jsonp\">JSONP</h3>\n<p>以前很流行，现在很少用，只支持 GET请求</p>\n<p>就是利用加载JS不跨域的特性，使用script src发送get请求，然后服务端返回将数据包裹在回调函数中进行返回。当请求返回回调函数时，该函数就会执行，实现跨域请求数据的需求。</p>\n<p>原理相同的还有 ImgP</p>\n<h3 id=\"其他\">其他</h3>\n<ol>\n<li>postMessage</li>\n<li>window.name  结合iframe 拿去跨域页面数据</li>\n<li>docment.domain 没用过</li>\n</ol>\n<h2 id=\"扩展\">扩展</h2>\n<ol>\n<li>localStorage 也存在跨域问题</li>\n<li>针对跨域脚本，一般无法捕获具体错误。可以加上 <code>crossorigin=&quot;anonymouse&quot;</code>加上JS返回允许跨域，即可显示详细堆栈</li>\n<li>canvas 绘制图片元素时也存在跨域限制，可以使用上述同种方法进行解决</li>\n</ol>\n"
+}

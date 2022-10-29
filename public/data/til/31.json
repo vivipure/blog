@@ -1,0 +1,9 @@
+{
+    "title": "浏览器存储",
+    "excerpt": "localStorage 持续存储，最大存储5M. sessionStorage 页面浏览器用的临时存储，关闭页面就消失 cookie",
+    "updated": "2022-09-02 01:24:57 ",
+    "created": "2022-09-01 05:53:29 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 31,
+    "content": "<h1 id=\"localstorage\">localStorage</h1>\n<p>持续存储，最大存储5M.</p>\n<h1 id=\"sessionstorage\">sessionStorage</h1>\n<p>页面浏览器用的临时存储，关闭页面就消失</p>\n<h1 id=\"cookie\">cookie</h1>\n"
+}

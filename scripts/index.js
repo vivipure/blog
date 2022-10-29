@@ -1,4 +1,5 @@
 #!/env/node
+
 const fs = require("fs");
 const grayMatter = require("gray-matter");
 const M = require("marked");
@@ -7,7 +8,9 @@ const fg = require("fast-glob");
 require('dotenv').config()
 
 const removeMd = require("remove-markdown");
-const { Octokit } = require("octokit");
+const {
+  Octokit
+} = require("octokit");
 const octokit = new Octokit({
   auth: process.env.GITHUB_KEY,
 });
@@ -50,16 +53,14 @@ function transformMDToJSON() {
 
   fs.writeFile(
     "public/data/list.json",
-    JSON.stringify(postList, null, 4),
-    {
+    JSON.stringify(postList, null, 4), {
       encoding: "utf-8",
     },
     (err) => {}
   );
   fs.writeFile(
     "public/data/content.json",
-    JSON.stringify(postContentList, null, 4),
-    {
+    JSON.stringify(postContentList, null, 4), {
       encoding: "utf-8",
     },
     (err) => {}
@@ -75,13 +76,17 @@ function getAllIssues(owner, repo) {
     .then((res) => res.data);
 }
 
-function backupIssueToMarkdownFile(issue) {
+function backupIssueToMarkdownFile(issue, folder = 'content') {
   const preffix = `---\ntitle: "${issue.title}"\ncreated: "${issue.created_at}\n"updated: "${issue.updated_at}"\n---\n`;
   const mdContent = preffix + issue.body;
+  const path = `public/${folder}`
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path)
+  }
+
   fs.writeFile(
-    `public/content/${issue.number}.md`,
-    mdContent,
-    {
+    `${path}/${issue.number}.md`,
+    mdContent, {
       encoding: "utf-8",
     },
     (err) => {
@@ -90,18 +95,65 @@ function backupIssueToMarkdownFile(issue) {
   );
 }
 
-async function tranformIssueToData() {
-  const issues = await getAllIssues("vivipure", "blog");
+function transformIssueToPostData(issue) {
+  return {
+    title: issue.title,
+    excerpt: getMarkdownExcerpt(issue.body),
+    updated: issue.updated_at.replace("T", " ").replace("Z", " "),
+    created: issue.created_at.replace("T", " ").replace("Z", " "),
+    avatar: `https://avatars.githubusercontent.com/u/26271337?v=4`,
+    id: issue.number,
+    content: M.marked(issue.body),
+  }
+}
+
+
+function generatePostDetail(issue, folderName) {
+  const data = transformIssueToPostData(issue)
+  const path = `public/data/${folderName}`
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path)
+  }
+
+  fs.writeFile(
+    `${path}/${issue.number}.json`,
+    JSON.stringify(data, null, 4), {
+      encoding: "utf-8",
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
+}
+
+function generatePostList(list, folderName) {
+  fs.writeFile(
+    `public/data/${folderName}/list.json`,
+    JSON.stringify(list, null, 4), {
+      encoding: "utf-8",
+    },
+    (err) => {}
+  );
+}
+
+async function tranformIssueToData(repoOwnder, repoName) {
+  const issues = await getAllIssues(repoOwnder, repoName);
+  let postList = []
   Object.values(issues).forEach((issue) => {
     // 备份markdown 文件
-    backupIssueToMarkdownFile(issue)
+    // backupIssueToMarkdownFile(issue, repoName.toLowerCase())
     // 转化为JSON
+    // generatePostDetail(issue, repoName.toLowerCase())
+    const data = transformIssueToPostData(issue)
+
+    delete data.content
+    postList.push(data)
   });
+  generatePostList(postList, repoName.toLowerCase())
 }
 
 function main() {
-  // transformMDToJSON();
-  console.log(process.env.GITHUB_KEY)
+  tranformIssueToData('vivipure', 'blog');
 }
 
 main();

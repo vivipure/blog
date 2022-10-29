@@ -1,14 +1,14 @@
 <template>
-  <router-link :to="`/post/${post.id}`" class="post-item">
+  <router-link :to="`/post/${post.id}?type=${props.path}`" class="post-item">
     <div class="post-title">
-      {{post.title}}
+      {{ post.title }}
     </div>
     <div class="post-time">
       <img class="icon" :src="post.avatar" />
-      <div class="time">{{post.updated}}</div>
+      <div class="time">{{ post.updated }}</div>
     </div>
     <div class="post-excerpt">
-      {{post.excerpt}}
+      {{ post.excerpt }}
     </div>
   </router-link>
 </template>
@@ -19,13 +19,14 @@ interface PropsInterface {
     id: string;
     title: string;
     excerpt: string;
-    updated: string
-    avatar: string
+    updated: string;
+    avatar: string;
   };
+  path: string;
 }
 
 const props = defineProps<PropsInterface>();
-const post = props.data
+const post = props.data;
 </script>
 
 <style lang="less" scoped>

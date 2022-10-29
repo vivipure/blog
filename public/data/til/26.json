@@ -1,0 +1,9 @@
+{
+    "title": "常用的一些前端配置",
+    "excerpt": "别名配置 JS配置 新建 jsconfig.json, 方便编辑器代码跳转，对构建无意义 `json { \"compilerOptions\": { \"baseUrl\": \".\", \"paths\": { \"@/\": [\"src/\"] } },...",
+    "updated": "2022-08-12 08:04:32 ",
+    "created": "2022-08-12 08:04:32 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 26,
+    "content": "<h1 id=\"别名配置\">别名配置</h1>\n<h2 id=\"js配置\">JS配置</h2>\n<p>新建 <code>jsconfig.json</code>, 方便编辑器代码跳转，对构建无意义</p>\n<pre><code class=\"language-json\">{\n  &quot;compilerOptions&quot;: {\n    &quot;baseUrl&quot;: &quot;.&quot;,\n    &quot;paths&quot;: {\n      &quot;@/*&quot;: [&quot;src/*&quot;]\n    }\n  },\n  &quot;exclude&quot;: [&quot;node_modules&quot;],\n  &quot;include&quot;: [&quot;src/**/*&quot;]\n}\n</code></pre>\n<h2 id=\"ts配置\">TS配置</h2>\n<p>在 <code>tsconfig.json</code> 中配置 <code>paths</code></p>\n<pre><code class=\"language-json\"> &quot;compilerOptions&quot;: {\n    &quot;paths&quot;: {\n      &quot;@/*&quot;:[&quot;./src/*&quot;]\n    }\n  }\n</code></pre>\n<h2 id=\"webpack配置\">Webpack配置</h2>\n<p><code>webpack.config.js</code> 配置 <code>resolve</code></p>\n<pre><code class=\"language-js\">  resolve: {\n        alias: {\n            &#39;@&#39;: path.resolve(&#39;src&#39;),\n        },\n  },\n</code></pre>\n<h2 id=\"vite-配置\">Vite 配置</h2>\n<p><code>vite.config.js</code>中配置 <code>resolve</code></p>\n<pre><code class=\"language-js\">resolve: {\n    alias: {\n      &quot;@&quot;: path.resolve(__dirname, &#39;src&#39;)\n    }\n  }\n</code></pre>\n<h2 id=\"babel配置（rn使用时）\">Babel配置（RN使用时）</h2>\n<p>下载插件<code>babel-plugin-module-resolver</code>,在 <code>babel.config.js</code>中配置</p>\n<pre><code class=\"language-js\">module.exports = {\n  presets: [&#39;module:metro-react-native-babel-preset&#39;],\n  plugins: [\n    [\n      &#39;module-resolver&#39;,\n      {\n        alias: {\n          &#39;@&#39;: &#39;./src&#39;,\n        },\n      },\n    ],\n  ],\n}\n</code></pre>\n"
+}

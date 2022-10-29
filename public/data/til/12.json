@@ -1,0 +1,9 @@
+{
+    "title": "浏览器输入URL后发生了什么? 关于浏览器渲染的答案",
+    "excerpt": "MDN的答案： 渲染页面：浏览器的工作原理 掘金的文章： https://juejin.cn/post/6871947938701475847",
+    "updated": "2022-06-19 15:48:15 ",
+    "created": "2022-06-19 15:42:16 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 12,
+    "content": "<p>MDN的答案： <a href=\"https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work#%E6%A6%82%E8%BF%B0\">渲染页面：浏览器的工作原理</a>\n掘金的文章： <a href=\"https://juejin.cn/post/6871947938701475847\">https://juejin.cn/post/6871947938701475847</a></p>\n"
+}

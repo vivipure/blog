@@ -1,0 +1,9 @@
+{
+    "title": "一个新的提案对React 的影响",
+    "excerpt": "注意到React 一条新的PR， 是关于 rfc。 RFC: First class support for promises and async/await 链接地址： https://github.com/reactjs/rfcs/pu...",
+    "updated": "2022-10-17 11:53:21 ",
+    "created": "2022-10-17 11:14:25 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 49,
+    "content": "<p>注意到React 一条新的PR， 是关于 rfc。 </p>\n<blockquote>\n<p>RFC: First class support for promises and async/await</p>\n</blockquote>\n<p>链接地址： <a href=\"https://github.com/reactjs/rfcs/pull/229\">https://github.com/reactjs/rfcs/pull/229</a></p>\n<p>rfc文档： <a href=\"https://github.com/acdlite/rfcs/blob/first-class-promises/text/0000-first-class-support-for-promises.md\">https://github.com/acdlite/rfcs/blob/first-class-promises/text/0000-first-class-support-for-promises.md</a></p>\n<p>看了大致的内容，主要概括为两点</p>\n<ol>\n<li>服务端时，函数组件可以直接使用 async  await 获取数据后在返回 Node</li>\n<li>客户端时，提供use函数，该函数支持异步，且解决了 hook 必须在不能在条件语句中使用的问题</li>\n</ol>\n<p>这个对React 本身的影响还是挺大的。进行客户端开发，极大的方便了我们撰写逻辑，解除了hooks的限制。</p>\n<p>对于React 的生态，例如Nextjs, Remix等，都有很大的影响。 以前必须要写的那些获取数据的额外函数，都不在需要约定了，可以直接写在组件内部。</p>\n"
+}

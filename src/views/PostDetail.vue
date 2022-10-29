@@ -13,7 +13,6 @@
         ></section>
       </template>
       <Loading v-else></Loading>
-
     </div>
   </Layout>
 </template>
@@ -29,9 +28,10 @@ import { useFetch } from "../hooks/useFetch";
 const contentRef = ref<Element>();
 const route = useRoute();
 const { postId } = route.params;
+const { type } = route.query;
 
-const path = `data/content.json`;
-const { post } = useFetch(path, postId as string, contentRef);
+const path = `data/${type}/${postId}.json`;
+const { post } = useFetch(path, contentRef);
 </script>
 
 <style lang="less" scoped>
@@ -77,21 +77,17 @@ const { post } = useFetch(path, postId as string, contentRef);
   }
 }
 
-p > code,
-a > code,
-li > code,
-figcaption > code,
-td > code {
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  font-size: 0.8em;
-  background: #fafafa;
-  border-radius: 4px;
-}
 
+</style>
+<style>
+pre {
+  border-radius: .2em;
+  padding: .2em;
+  
+}
 pre code.hljs {
   padding: 1em;
   border-radius: 0.2em;
   margin-bottom: 1.3em;
-}
-</style>
+  background: #f6f6f6;
+}</style>

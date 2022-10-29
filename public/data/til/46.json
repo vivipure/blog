@@ -1,0 +1,9 @@
+{
+    "title": "经典算法",
+    "excerpt": "fibonacci F(0) = 0, F(1) = 1 when n > 1 F(n) = F(n-1) + F(n-2) `ts function fibonacci(n) { if(n < 2) return n return fib...",
+    "updated": "2022-10-08 22:40:27 ",
+    "created": "2022-10-08 22:40:27 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 46,
+    "content": "<h1 id=\"fibonacci\">fibonacci</h1>\n<p>F(0) = 0, F(1) = 1</p>\n<p>when n &gt; 1</p>\n<p>F(n) = F(n-1) + F(n-2)</p>\n<pre><code class=\"language-ts\">function fibonacci(n) {\n    if(n &lt; 2) return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n}\n</code></pre>\n<p>递归模式在参数较大时，速度较慢，可以增加缓存机制</p>\n<pre><code class=\"language-typescript\">const cacheMap = new Map()\nfunction fibonacci(n) {\n   if(cacheMap.has(n)) {\n       return cacheMap.get(n)\n   }\n    if(n &lt; 2) { \n       cacheMap.set(n, n)\n       return n\n    }\n    const result =  fibonacci(n - 1) + fibonacci(n - 2)\n    cacheMap.set(n, result)\n    return result\n}\n</code></pre>\n"
+}

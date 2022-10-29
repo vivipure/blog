@@ -3,7 +3,6 @@ import { useRouter } from "vue-router";
 
 export const useFetch = (
   url: string,
-  id: string,
   refDOM: Ref<Element | undefined>
 ) => {
   const post = reactive<{
@@ -24,7 +23,7 @@ export const useFetch = (
     })
     .then((res) => {
       const contentMap: Record<string, any> = JSON.parse(res as string);
-      Object.assign(post, contentMap[id]);
+      Object.assign(post, contentMap);
       nextTick(() => {
         (refDOM.value as Element)
           ?.querySelectorAll("pre code")

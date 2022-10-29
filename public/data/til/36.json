@@ -1,0 +1,9 @@
+{
+    "title": "less 深入",
+    "excerpt": "less https://lesscss.org/ 作为常用的 CSS 预处理器之一，less 的使用频率是比较高的。相较于 Sass , less 的功能会相对简单。 作为开发者，使用嵌套写法只是基础的功能，还有写很多实用功能等着我们去探...",
+    "updated": "2022-09-13 08:00:44 ",
+    "created": "2022-09-13 08:00:28 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 36,
+    "content": "<h1 id=\"less\">less</h1>\n<blockquote>\n<p><a href=\"https://lesscss.org/\">https://lesscss.org/</a></p>\n</blockquote>\n<p>作为常用的 CSS 预处理器之一，less 的使用频率是比较高的。相较于 Sass , less 的功能会相对简单。</p>\n<p>作为开发者，使用嵌套写法只是基础的功能，还有写很多实用功能等着我们去探索。</p>\n<h2 id=\"下载\">下载</h2>\n<pre><code>npm i less -D\n</code></pre>\n<h2 id=\"webpack-使用\">webpack 使用</h2>\n<pre><code>npm i less-loader -D\n</code></pre>\n"
+}
