@@ -1,0 +1,9 @@
+{
+    "title": "Vue3 使用心得",
+    "excerpt": "Teleport 在 Vue2 中，开发弹窗组件时，如果需要将DOM挂载到body下时，需要我们手动进行处理。 `vue mounted() { document.body.appendChild(this.$el) } ` 在Vue3 中...",
+    "updated": "2022-10-19 09:28:55 ",
+    "created": "2022-09-13 06:38:33 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 35,
+    "content": "<h1 id=\"teleport\">Teleport</h1>\n<p>在 Vue2 中，开发弹窗组件时，如果需要将DOM挂载到body下时，需要我们手动进行处理。</p>\n<pre><code class=\"language-vue\">mounted() {\n    document.body.appendChild(this.$el)\n}\n</code></pre>\n<p>在Vue3 中，使用setup语法时是无法使用this的，而使用ref获取dom的方式也比较麻烦。</p>\n<p>不过，Vue3提供了 Teleport组件，方便讲组件挂在到指定的dom下。类似于 <code>ReactDOM.createPortal</code></p>\n<pre><code> &lt;Teleport to=&quot;body&quot;&gt;\n  ...\n  &lt;/Teleport&gt;\n</code></pre>\n"
+}

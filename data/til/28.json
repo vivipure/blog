@@ -1,0 +1,9 @@
+{
+    "title": "关于HTTP",
+    "excerpt": "HTTP 版本 HTTP 1.0 无状态，无连接的应用层协议，每次请求都需要和服务器建立一个TCP连接 HTTP 1.1 1.0 的升级版，支持长连接，通过 Connection 字段设置 Keep-Alive 保持HTTP连接，避免每次连...",
+    "updated": "2022-09-18 09:16:10 ",
+    "created": "2022-08-21 14:45:32 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 28,
+    "content": "<h1 id=\"http-版本\">HTTP 版本</h1>\n<h2 id=\"http-10\">HTTP 1.0</h2>\n<p>无状态，无连接的应用层协议，每次请求都需要和服务器建立一个TCP连接</p>\n<h2 id=\"http-11\">HTTP 1.1</h2>\n<p>1.0 的升级版，支持长连接，通过 Connection 字段设置 Keep-Alive 保持HTTP连接，避免每次连接都重复连接和断开TCP， 提高来连接效率</p>\n<p>支持断点续传，请求头中新增 Range字段</p>\n<p>支持 pipe 传输</p>\n<p>支持长连接</p>\n<h2 id=\"http-2\">HTTP 2</h2>\n<ol>\n<li>二进制分帧</li>\n<li>基于流进行传输，多路复用</li>\n<li>服务器推送（Server push）</li>\n<li>header压缩</li>\n</ol>\n<h2 id=\"http-3\">HTTP 3</h2>\n<p>1.基于UDP的QUIC协议</p>\n"
+}

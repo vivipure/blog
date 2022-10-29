@@ -1,0 +1,9 @@
+{
+    "title": "Web 安全扫盲",
+    "excerpt": "XSS https://owasp.org/www-community/attacks/xss/ XSS (cross site scripting) 跨站脚本攻击，可以理解为网站会执行用户提交的内容。 类型： 反射型 恶意输入包含到链接中...",
+    "updated": "2022-08-08 12:25:20 ",
+    "created": "2022-07-14 15:36:00 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 21,
+    "content": "<h1 id=\"xss\">XSS</h1>\n<blockquote>\n<p><a href=\"https://owasp.org/www-community/attacks/xss/\">https://owasp.org/www-community/attacks/xss/</a></p>\n</blockquote>\n<p>XSS (cross site scripting) 跨站脚本攻击，可以理解为网站会执行用户提交的内容。</p>\n<p>类型：</p>\n<ol>\n<li>反射型\n恶意输入包含到链接中，通过服务端生成包含恶意代码的HTML, 用户访问链接后执行恶意代码</li>\n<li>存储型\n用户输入存储到服务器中，其他用户可以看到这个输入。如果这个输入直接渲染，可能会执行恶意代码。</li>\n<li>DOM型\n和反射性类似，一般是通过链接输入获取参数然后写入到页面中，区别是服务端返回HTML是正常的，客户端后续执行生成了恶意代码。例如<code>innerHTML</code>,<code>eval</code> 等操作。</li>\n</ol>\n<p>出现原因：未对用户输入进行转义，直接展示用户的输入，导致执行用户输入的代码。常见于评论区，个人信息，私信等功能。可能造成其他用户的用户信息泄漏，危害极大。</p>\n<p>如何防御：</p>\n<ol>\n<li>对用户输入进行转义，过滤</li>\n<li>使用 <a href=\"https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP\">CSP</a> ,进行脚本执行限制</li>\n<li>cookie 设置HttpOnly， 禁止 JS 获取</li>\n<li>避免直接拼接HTML的操作，或者直接设置 innerHTML</li>\n</ol>\n<blockquote>\n<p>XSS 攻击本质上可以说是 HTML注入，执行用户输入的内容</p>\n</blockquote>\n"
+}

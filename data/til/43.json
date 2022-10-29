@@ -1,0 +1,9 @@
+{
+    "title": "Astro 使用体验",
+    "excerpt": "介绍 Astro 是 snowpack 的作者开发的前端框架，支持多种组件化框架。提供SSG,SSR等能力。 开始 ` npm create astro@latest ` 添加模块 solid 可以通过命令直接添加模块,例如引入 solid...",
+    "updated": "2022-10-01 11:48:00 ",
+    "created": "2022-10-01 11:44:29 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 43,
+    "content": "<h1 id=\"介绍\">介绍</h1>\n<p><a href=\"https://astro.build/\">Astro</a> 是 snowpack 的作者开发的前端框架，支持多种组件化框架。提供SSG,SSR等能力。</p>\n<h1 id=\"开始\">开始</h1>\n<pre><code>npm create astro@latest\n</code></pre>\n<h1 id=\"添加模块\">添加模块</h1>\n<p>solid 可以通过命令直接添加模块,例如引入 solid-js</p>\n<pre><code>npm astro add solid\n</code></pre>\n<p>当然也可以手动引入 <code>solid-js</code>和<code>@astro/solid-js</code>,然后在 astro.config.mjs中引入</p>\n<pre><code class=\"language-js\">import { defineConfig } from &#39;astro/config&#39;;\nimport solid from &#39;@astrojs/solid-js&#39;\n\nexport default defineConfig({\n  integrations: [ solid()]\n});\n</code></pre>\n<h1 id=\"使用组件\">使用组件</h1>\n<p>现代的开发框架都支持组件开发，astro自身支持 astro组件，也支持.tsx,.vue,.svelte等组件</p>\n<p>甚至组件和组件之前可以各种嵌套。</p>\n<pre><code>---\nimport Layout from &#39;../layouts/Layout.astro&#39;;\nimport Card from &#39;../components/Card.vue&#39;;\nimport CodeEditor from &#39;../components/CodeEditor&#39;\n---\n&lt;Layout&gt;\n   &lt;main&gt;\n         &lt;Card /&gt;\n         &lt;CodeEditor /&gt;\n   &lt;main&gt;\n&lt;/Layout&gt;\n</code></pre>\n"
+}

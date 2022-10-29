@@ -1,0 +1,9 @@
+{
+    "title": "JavaScript Generators",
+    "excerpt": "迭代器 JS 中迭代器是指包含 next 方法的对象， next 方法返回一个包含 value 和 done 键值的对象。 `js a.next() // {value: 1, done: false} a.next() // {value...",
+    "updated": "2022-06-24 16:43:05 ",
+    "created": "2022-06-24 16:25:44 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 14,
+    "content": "<h1 id=\"迭代器\">迭代器</h1>\n<p>JS 中迭代器是指包含 next 方法的对象， next 方法返回一个包含 value 和 done 键值的对象。</p>\n<pre><code class=\"language-js\">a.next() // {value: 1, done: false}\na.next() // {value: 2, done: false}\na.next() // {value: undefined, done: true}\n</code></pre>\n<h1 id=\"生成器\">生成器</h1>\n<p>生成器 是 一种类型的迭代器， 生成器函数返回一个生成器对象，这个对象是可迭代的</p>\n<pre><code>function * genFunction() {\n     yield 1;\n}\nconst g = genFunction()\ng.next() // value: 1, done: false\ng.next() // value: undefined , done: true\n</code></pre>\n<h1 id=\"自定义迭代器\">自定义迭代器</h1>\n<pre><code>const customIterator = {\n    [Symbol.iterator]: function * () {\n        let i = 0;\n        while(i++ &lt; 10) {\n             yield i\n       }\n    }\n}\n</code></pre>\n<p>利用 [Symbol.iterator] 我们可以实现直接的迭代对象，该对象可以通过 <code>for ... in...</code> 进行遍历</p>\n<h1 id=\"yield-传值\">yield 传值</h1>\n<p>当我们在生成器对象next 方法传入参数时，当前的 yield 会变成我们传入的参数</p>\n<pre><code class=\"language-js\">function * listener() {\n  while(true) {\n     let msg = yield\n     console.log(msg)\n  }\n}\nlet l = listener()\nl.next(1) // 1\nl.next(2) // 2\n</code></pre>\n<h1 id=\"纤程\">纤程</h1>\n<p>纤程 是 更小的线程，在JS中，可以通过 generator 实现纤程的效果</p>\n<p>TODO:demo</p>\n<h1 id=\"惰性求值\">惰性求值</h1>\n<p>利用yield 结合 无限循环， 我们可以通过其他函数调用生成器函数，生产我们想要的值。实际上函数内部使用了 <code>while(true)</code> 的语法，但是执行线程不会进入死循环，十分的有趣。</p>\n"
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Swiper 开发汇总",
+    "excerpt": "当DOM处于 display : none 时，初始化的swiper由于无法获取高度，会导致swiper无法正常滑动。当DOM处于可显示状态时，使用swiper.update() 可以恢复正常。 隐藏DOM可以用 visibility",
+    "updated": "2022-08-25 03:23:37 ",
+    "created": "2022-08-25 03:23:37 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 29,
+    "content": "<ol>\n<li>当DOM处于 display : none 时，初始化的swiper由于无法获取高度，会导致swiper无法正常滑动。当DOM处于可显示状态时，使用swiper.update() 可以恢复正常。 隐藏DOM可以用 visibility</li>\n</ol>\n"
+}

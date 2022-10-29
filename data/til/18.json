@@ -1,0 +1,9 @@
+{
+    "title": "Web 性能优化",
+    "excerpt": "首页白屏优化 原因 页面在进行渲染时，同步加载的JS和CSS都会阻塞页面渲染。SPA 应用将所有逻辑打包成JS，导致浏览器加载js 时间过长，就会出现白屏情况 解决办法 首页加载不执行的js，可以使用异步加载，例如Vue 路由懒加载，异步组...",
+    "updated": "2022-07-14 15:34:15 ",
+    "created": "2022-07-11 15:18:36 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 18,
+    "content": "<h1 id=\"首页白屏优化\">首页白屏优化</h1>\n<h2 id=\"原因\">原因</h2>\n<p>页面在进行渲染时，同步加载的JS和CSS都会阻塞页面渲染。SPA 应用将所有逻辑打包成JS，导致浏览器加载js 时间过长，就会出现白屏情况</p>\n<h2 id=\"解决办法\">解决办法</h2>\n<ol>\n<li>首页加载不执行的js，可以使用异步加载，例如Vue 路由懒加载，异步组件</li>\n<li>将通用库从 bundler中抽离，然后放在cdn</li>\n<li>gzip 压缩</li>\n<li>SSR</li>\n<li>使用 prefetch ,preload 设置样式的优先级</li>\n<li>骨架屏，loading</li>\n<li>优化图片格式，使用webP</li>\n<li>减少文件请求</li>\n<li>使用缓存</li>\n</ol>\n<p>5备注：\nprefetch 加载浏览器页面可能需要的资源，浏览器不一定加载这些资源，在Vue 生成的App 中我们可以看到 路由的资源基本使用prefetch</p>\n<p>preload 告诉浏览器页面必需这些资源，浏览器也一定会加载</p>\n<p>preload 将加载和执行分离，不阻塞渲染。</p>\n<p>perload/prefetch 不仅可以用于js，也可以加载样式图片。defer只能异步加载js</p>\n"
+}

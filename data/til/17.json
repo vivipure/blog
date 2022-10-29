@@ -1,0 +1,9 @@
+{
+    "title": "React hooks",
+    "excerpt": "useId useId 是 React 18 新增的hooks, 可以生成独一无二的id。 当我们的组件html 里面包含 id 时，多个组件同时渲染，会表现为多个元素拥有同一个id，导致语法上不合理。虽然我们可以用随机数或者时间戳的方式生...",
+    "updated": "2022-07-10 11:28:58 ",
+    "created": "2022-07-03 10:53:00 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 17,
+    "content": "<h1 id=\"useid\">useId</h1>\n<p><a href=\"https://reactjs.org/blog/2022/03/29/react-v18.html#useid\">useId</a> 是 <code>React 18</code> 新增的<code>hooks</code>, 可以生成独一无二的id。</p>\n<p>当我们的组件html 里面包含 id 时，多个组件同时渲染，会表现为多个元素拥有同一个id，导致语法上不合理。虽然我们可以用随机数或者时间戳的方式生成id， 但是在函数组件中每次更新都会更改id，所以官方出了 <code>useId</code>. </p>\n<p>官方的文档也说明了 <code>useId</code> 出现的作用</p>\n<ol>\n<li>当第三方库需要独一无二的 id时 </li>\n<li>处理服务端渲染后，和客户端 hydrate 不匹配的问题</li>\n</ol>\n<p>具体使用：</p>\n<pre><code class=\"language-ts\">function Checkbox() {\n  const id = useId();\n  return (\n    &lt;&gt;\n      &lt;label htmlFor={id}&gt;Do you like React?&lt;/label&gt;\n      &lt;input id={id} type=&quot;checkbox&quot; name=&quot;react&quot;/&gt;\n    &lt;/&gt;\n  );\n};\n</code></pre>\n<p>这里比较有意思的是，生成的 id 并不是合法的 selector id， 也就是说无法通过 <code>DOM</code> 匹配都该元素，毕竟 <code>React</code> 推荐使用 <code>ref</code> 来操作操作 <code>DOM </code></p>\n"
+}

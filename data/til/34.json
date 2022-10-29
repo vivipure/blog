@@ -1,0 +1,9 @@
+{
+    "title": "实现图片懒加载的几种方式",
+    "excerpt": "getBoundingClientRect 使用 getBoundingClientRect 方法可以获取元素的尺寸和位置。在页面滚动时，可以计算所有的图片元素，获取元素的距离视图的高度，和视图的高度。如果视图高度大于距离高度，则将懒加载的...",
+    "updated": "2022-09-08 15:31:21 ",
+    "created": "2022-09-08 15:31:21 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 34,
+    "content": "<h1 id=\"getboundingclientrect\">getBoundingClientRect</h1>\n<p>使用 <code>getBoundingClientRect</code> 方法可以获取元素的尺寸和位置。在页面滚动时，可以计算所有的图片元素，获取元素的距离视图的高度，和视图的高度。如果视图高度大于距离高度，则将懒加载的地址放到src 中</p>\n<pre><code>img.getBoundingClientRect().top &lt; window.innerHeigh\n</code></pre>\n<h1 id=\"intersectionobserver\">IntersectionObserver</h1>\n<p>IntersectionObserver 当元素进入到可视视图时就会触发回调</p>\n<pre><code class=\"language-js\">const imgIntersectionObserver = new IntersectionObserver((entries) =&gt; {\n     for (let img of entries) {\n          if(img.isIntersecting) {\n            img.src = img.dataset.src\n             imgIntersectionObserver .unobserve(img)\n         }\n      }\n})\n\nfor (let img of imgList) {\n     imgIntersectionObserver .observe(img)\n}\n</code></pre>\n<h1 id=\"原生支持\">原生支持</h1>\n<pre><code>&lt;img loading=&quot;lazy&quot; src=&quot;&quot; /&gt;\n</code></pre>\n"
+}

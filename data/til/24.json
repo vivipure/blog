@@ -1,0 +1,9 @@
+{
+    "title": "JavaScript 模块化",
+    "excerpt": "CommonJS 定义 CommonJS 规范定义了 exports 导出模块，require引入模块。Node.js 实现了 CommonJS 规范 `js module.exports = { name: \"aa\", age: 12, ...",
+    "updated": "2022-08-31 15:54:00 ",
+    "created": "2022-08-08 15:57:50 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 24,
+    "content": "<h1 id=\"commonjs\">CommonJS</h1>\n<h2 id=\"定义\">定义</h2>\n<p>CommonJS 规范定义了 exports 导出模块，require引入模块。Node.js 实现了 CommonJS 规范</p>\n<pre><code class=\"language-js\">module.exports = {\n   name: &quot;aa&quot;,\n   age: 12,\n}\n//   等同于\nexports.name = &#39;aa&#39;\nexports.age = 12\n// ❌\nexports = {\n   name: &quot;aa&quot;,\n   age: 12,\n}\n</code></pre>\n<p>Node.js 中每个模块都可以看作一个 module  对象，表示当前模块的信息，通过 module.exports 进行导出。</p>\n<p>Node.js 使用 require 进行导入模块</p>\n<pre><code class=\"language-js\">const  a = require(&#39;./a&#39;.js)\na.name\na.age\n</code></pre>\n<h2 id=\"特点\">特点</h2>\n<ol>\n<li>导出的值是当前模块导出值的浅拷贝</li>\n<li>运行时加载，所以可以在函数内动态加载</li>\n<li>同步加载，有缓存</li>\n</ol>\n<h2 id=\"补充\">补充</h2>\n<p>Node.js 的寻包机制： TODO</p>\n"
+}

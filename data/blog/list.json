@@ -1,0 +1,202 @@
+[
+    {
+        "title": "Module Federation 详解",
+        "excerpt": "WIP",
+        "updated": "2022-10-24 11:50:59 ",
+        "created": "2022-10-24 11:50:59 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 25
+    },
+    {
+        "title": "Solid 使用体验",
+        "excerpt": "写在前面 国庆假期基本没出去玩，学习了下Astro 和 Solid。这篇文章就来具体讲下 Solid 的开发体验，还有和Vue ,React的框架区别 React Like `tsx const [count, setCount] = cr...",
+        "updated": "2022-10-07 12:50:24 ",
+        "created": "2022-10-07 12:50:24 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 24
+    },
+    {
+        "title": "提供业务能力，SDK的开发（二）",
+        "excerpt": "一. 写在前面 之前文章讲了 SDK开发的背景，和具体封装的逻辑。最近有用户使用我的SDK进行二次开发，对接的过程中我发现SDK存在一些问题，例如 使用方式，对接方式。因此我根据这些问题，将SDK进行了重构。 二. 重构 框架通过暴露全局函...",
+        "updated": "2022-08-09 15:15:54 ",
+        "created": "2022-08-07 03:55:39 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 23
+    },
+    {
+        "title": "工作三年，我对前端领域的困惑",
+        "excerpt": "写在前面 今年是毕业的第三年，也是我从事前端开发的第三年。相比于刚毕业时用 Vue 都不太熟练的新手，现在的我可以算的上是一名靠谱的前端开发。对于前端这一领域，我也有了一些自己的思考。 学习 内卷这个词语是近几年的热词。作为程序员，我从技术...",
+        "updated": "2022-10-07 13:01:22 ",
+        "created": "2022-07-30 15:42:12 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 22
+    },
+    {
+        "title": "我所理解的 React Hooks ",
+        "excerpt": "hooks 出现的原因 class 自身存在的问题 组件逻辑复用困难，尽管拥有HOC 和render props ，逻辑复用还是比较困难。 在不同生命周期中执行不同的逻辑，组件会变得越来越复杂。相关的逻辑不好抽离 使用Class 组件只为了...",
+        "updated": "2022-07-09 16:05:44 ",
+        "created": "2022-07-09 09:28:43 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 21
+    },
+    {
+        "title": "简单又强大的状态管理 - Zustand",
+        "excerpt": "一. 写在前面 React 生态的状态管理库有很多，比如Redux ，Recoil ，Mobx，自身的 context 也可以用来进行状态管理。 首先 Redux 实在说不上是一个合格的状态管理库，功能太基础，结合业务必须使用插件。而且需要...",
+        "updated": "2022-07-07 16:11:21 ",
+        "created": "2022-07-07 16:11:21 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 20
+    },
+    {
+        "title": "Vue 源码学习 (5) - nextTick",
+        "excerpt": "写在前面 在平时开发中，我们更新数据后，需要通过 nextTick 的回调中才能获取DOM。 `ts this.value = 1 this.$nextTick(() => { ... }) ` 通过前面的文章我们知道，这是因为 Vue中数...",
+        "updated": "2022-07-03 16:43:36 ",
+        "created": "2022-07-03 16:43:36 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 19
+    },
+    {
+        "title": "Vue 源码学习 (4) - 响应式篇",
+        "excerpt": "一. 数据初始化 如果有人问 Vue 的响应式是怎么实现的，大多数人会回答 通过数据劫持，利用 Object.defineProperty 劫持 getter 和 setter 实现的。数据赋值时，更新视图。然后数组 通过重写数组的 pro...",
+        "updated": "2022-07-03 16:42:54 ",
+        "created": "2022-07-03 16:42:54 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 18
+    },
+    {
+        "title": "Vue 源码学习 (3) - 组件",
+        "excerpt": "一. createComponent Vue 开发就是开发组件，现在我们来看看组件形成 VNode 的逻辑。 在 _createElement 方法中, 在两种场景会调用 createComponent 方法 `ts // tag 是已经声...",
+        "updated": "2022-07-03 16:42:09 ",
+        "created": "2022-07-03 16:42:09 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 17
+    },
+    {
+        "title": "SEO需求，Nuxt SSG练手",
+        "excerpt": "一. 业务背景 部门官网和主应用是一个 SPA 的服务。由于业务扩展，希望能够被搜索引擎收录到，所以官网需要做 SEO。 二. 技术选型 由于直接在原主应用上做 SSR，改动成本太大，决定直接使用现成的 SSR 框架。 Next.js 与 ...",
+        "updated": "2022-06-27 16:33:15 ",
+        "created": "2022-06-27 16:33:15 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 16
+    },
+    {
+        "title": "Vue 源码学习 (2) - Vue 初始化",
+        "excerpt": "_init 当我们使用 Vue 2 时，我们会用 Vue 实例化一个应用 `ts const app = new Vue({ render: h => h(App) }).$mount('#app') ` Vue 是一个构造函数，实例化时会...",
+        "updated": "2022-07-03 16:39:06 ",
+        "created": "2022-06-26 11:36:24 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 15
+    },
+    {
+        "title": "Vue 源码学习 (1) - 起始篇",
+        "excerpt": "一. 写在前面 作为前端开发，Vue 是我日常工作中使用最多的框架，各种特性我都有进行了解。但是对于框架底层的原理却知之甚少，知道数据劫持，但是不知道依赖收集的具体过程。知道 diff 算法，但对 Vue 所做的算法优化不了解。一入门就学习...",
+        "updated": "2022-06-26 11:28:17 ",
+        "created": "2022-06-26 11:28:17 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 14
+    },
+    {
+        "title": "网页打包安卓应用，实现流程自动化",
+        "excerpt": "一. 业务背景 部门的业务主要是营销物料的生产，可以分发到不同终端。手机可以在H5，小程序展示，PC可以打包成 electron应用，但是目前在安卓应用上是空缺的。因此需要提供用户可以将制作的物料直接打包成安卓应用的能力。 二.技术选型 在...",
+        "updated": "2022-06-18 13:04:22 ",
+        "created": "2022-06-18 13:04:22 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 13
+    },
+    {
+        "title": "编辑器历史记录功能，命令模式实操",
+        "excerpt": "一. 业务背景 上文我讲了编辑器的整体重构，也留下了一个关于 历史记录 的坑。在我们的业务中，无论老版本还是新版，都缺少历史记录的功能。 作为一款编辑器，不能进行历史记录的展示，不能进行操作的回退和重做是不完整的。因此开发历史记录功能刻不容...",
+        "updated": "2022-06-18 10:04:15 ",
+        "created": "2022-06-16 15:18:46 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 12
+    },
+    {
+        "title": "编辑器重构，数据建模实践",
+        "excerpt": "一. 业务背景 日常的工作有很大一部分都是编辑器的开发。由于业务需求，今年推动了全景编辑器2.0的重构。本文会主要讲述此次重构的全部细节。 作为一款编辑器，老版全景编辑器的功能存在很多问题。 数据实时变化，用户操作后立即保存。不能进行撤销，...",
+        "updated": "2022-06-16 14:33:48 ",
+        "created": "2022-06-16 14:33:48 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 11
+    },
+    {
+        "title": "提供业务能力，SDK的开发",
+        "excerpt": "一.业务背景 部门负责的业务主要是 H5 营销物料的制作，会有第三方使用我们的服务制作营销物料。作为营销产品，第三方往往需要私有化部署，自己保存相关的数据。当第三方需要进行数据采集或者在我们现有的框架上进行第二次开发时，就需要我们提供相应的...",
+        "updated": "2022-06-15 16:08:51 ",
+        "created": "2022-06-15 16:08:51 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 10
+    },
+    {
+        "title": "订单业务重构，谈谈大组件的拆分",
+        "excerpt": "TL,DR 最近半年对两个业务系统进行了重构升级，重构前的代码都是几千行的业务逻辑。在做业务迭代的过程中考虑到开发的难度和后续的维护，于是对就有组件进行了重构。经过重构将大文件组件进行拆分，方便了后续的扩展和维护。 业务背景 部门负责的业务...",
+        "updated": "2022-06-14 12:46:40 ",
+        "created": "2022-06-14 12:46:40 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 9
+    },
+    {
+        "title": "Vue Router 源码学习",
+        "excerpt": "1. 我的疑问 Vue Router 的使用频率还是很高的，作为开发者，我们可能知道 hash路由和 history路由 的区别和实现原理。但是一些还是东西是值得理解的。 内置组件 router-view 是怎么实现的 路由守卫是怎么实现的...",
+        "updated": "2022-06-13 16:35:26 ",
+        "created": "2022-06-13 16:35:26 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 8
+    },
+    {
+        "title": "源码学习系列",
+        "excerpt": "1. 为什么要学习源码 就现有的前端框架来说，阅读源码其实是困难的。例如Vue,React, 这些工业框架为了处理各种边界情况，会让代码变得不那么清晰。而我们在进行学习时就需要从繁到简，理清核心逻辑，学习核心原理。 至于学习框架的原因，也很...",
+        "updated": "2022-06-11 10:10:08 ",
+        "created": "2022-06-11 10:10:08 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 7
+    },
+    {
+        "title": "Vuex 源码学习",
+        "excerpt": "1. 我的疑问 1.1 $store是怎么保证每个组件都可以进行访问的 1.2. 为什么需要Mutation,而不是直接使用Action 1.3. mapState等方法是怎么映射到组件的 1.4. 怎么和Vue的响应式结合起来的 1.5....",
+        "updated": "2022-06-11 12:38:18 ",
+        "created": "2022-06-11 10:08:27 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 6
+    },
+    {
+        "title": "Vue2 组件开发",
+        "excerpt": "TL,DR Vue2 作为平时开发中最常用的框架，我在进行业务开发时对于组件拆分和设计还是比较有心得的。开发体验也还算友好，但是还是存在很多问题。本文会介绍一些常用的技巧和框架本身存在的一些问题。 一. 基本知识 1.1 组件使用 Vue中...",
+        "updated": "2022-06-09 16:04:58 ",
+        "created": "2022-06-05 15:32:49 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 5
+    },
+    {
+        "title": "组件开发和设计",
+        "excerpt": "TL.DR 前端开发已经几年了，对于业务场景中的组件开发也有自己的一些心得。平时开发中遇到的痛点和疑惑之处也常常令我烦躁。因此下文将谈谈我对组件开发和设计的理解。 1. What? Why? 组件化就是将业务逻辑进行抽离，将不同的业务逻辑抽...",
+        "updated": "2022-06-05 16:12:20 ",
+        "created": "2022-06-05 14:13:43 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 4
+    },
+    {
+        "title": "Webpack 优化",
+        "excerpt": "1. 写在前面 Webpack 作为构建工具，前端在使用过程中可以根据自身项目的实际情况进行相关配置。合理的配置对于开发和构建速度有着十分显著的提升。因此本文我们来了解下webpack优化相关的知识点 2. 具体方法 cache 💯 `j...",
+        "updated": "2022-06-27 15:27:40 ",
+        "created": "2022-05-11 14:21:16 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 3
+    },
+    {
+        "title": "Webpack 5 的变化",
+        "excerpt": "现代前端开发都讲究模块化开发，作为打包界的扛把子，Webpack对与整个前端生态有着巨大的影响。但是随着Vite,ESBuild等后起之秀的崛起，webpack本身存在的问题就愈发明显。无论是繁琐的配置文件，还是奇慢无比的构建速度都令人望而...",
+        "updated": "2022-10-20 13:50:21 ",
+        "created": "2022-05-10 15:31:41 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 2
+    },
+    {
+        "title": "第一篇博客",
+        "excerpt": "写博客的原因 主要是对自己平时的工作做技术沉淀，用有道云笔记其实也够用。但是我还是希望能够在公共平台进行发布，希望自己遇到的一些问题和解决方案可以对其他人有些帮助。 技术选型 对自己的技术博客选型了很久，最后还是选择了github。主要原因...",
+        "updated": "2022-05-25 13:32:29 ",
+        "created": "2022-01-16 13:10:28 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 1
+    }
+]

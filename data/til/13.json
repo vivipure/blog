@@ -1,0 +1,9 @@
+{
+    "title": "Vue 知识点",
+    "excerpt": "data 声明的变量 不能以 _ 或者 $ 开头，Vue 不会将这些变量转化为响应式变量，且无法在实例上访问到该变量 `ts // core/instance/state.ts ... else if (!isReserved(key)) ...",
+    "updated": "2022-08-26 06:21:13 ",
+    "created": "2022-06-22 06:22:23 ",
+    "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+    "id": 13,
+    "content": "<p>data 声明的变量 不能以 <code>_</code> 或者 <code>$</code> 开头，Vue 不会将这些变量转化为响应式变量，且无法在实例上访问到该变量</p>\n<pre><code class=\"language-ts\">// core/instance/state.ts\n...\nelse if (!isReserved(key)) {\n    proxy(vm, `_data`, key)\n}\n...\n\n// core/util/lang.ts\nexport function isReserved(str: string): boolean {\n  const c = (str + &#39;&#39;).charCodeAt(0)\n  return c === 0x24 || c === 0x5f\n}\n</code></pre>\n"
+}
