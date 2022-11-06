@@ -141,7 +141,7 @@ async function tranformIssueToData(repoOwnder, repoName) {
   let postList = []
   Object.values(issues).forEach((issue) => {
     // 备份markdown 文件
-    // backupIssueToMarkdownFile(issue, repoName.toLowerCase())
+    backupIssueToMarkdownFile(issue, repoName.toLowerCase())
     // 转化为JSON
     // generatePostDetail(issue, repoName.toLowerCase())
     const data = transformIssueToPostData(issue)

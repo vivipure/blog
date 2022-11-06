@@ -1,8 +1,16 @@
 [
     {
+        "title": "如何进行网站优化",
+        "excerpt": "最近官网迭代，需要更新官网的布局。在开发的过程中，我就顺便就优化了下官网的性能。 官网之前由于SEO的问题，从 SPA 中单独抽离了出来，用 Nuxt 重构为了一个 SSG 的应用。但是在我的日常使用中还是觉得官网访问慢，虽然Google和...",
+        "updated": "2022-11-06 16:39:13 ",
+        "created": "2022-11-06 16:39:13 ",
+        "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
+        "id": 26
+    },
+    {
         "title": "Module Federation 详解",
-        "excerpt": "WIP",
-        "updated": "2022-10-24 11:50:59 ",
+        "excerpt": "写在前面 2021年，我在项目中推行 Module Federation ,将前端服务中公共的组件和方法通过 Module Federation 进行共享，形成公共的组件库。自从有了公共组件库，组件的更新迭代十分顺畅，使用体验非常友好。本文...",
+        "updated": "2022-11-06 17:05:42 ",
         "created": "2022-10-24 11:50:59 ",
         "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
         "id": 25
@@ -10,7 +18,7 @@
     {
         "title": "Solid 使用体验",
         "excerpt": "写在前面 国庆假期基本没出去玩，学习了下Astro 和 Solid。这篇文章就来具体讲下 Solid 的开发体验，还有和Vue ,React的框架区别 React Like `tsx const [count, setCount] = cr...",
-        "updated": "2022-10-07 12:50:24 ",
+        "updated": "2022-11-02 15:03:24 ",
         "created": "2022-10-07 12:50:24 ",
         "avatar": "https://avatars.githubusercontent.com/u/26271337?v=4",
         "id": 24
